@@ -1,6 +1,20 @@
 // Colors
-$dark: #303030;
-$primary: #54ED39;
-$secondary: #FBFE5D;
-$bg1: #92F2FF;
-$bg2: #F9FE7E;
+$dark: #222831;
+$primary: #393e46;
+$secondary: #ffd369;
+$bg: #393e46;
+
+%r300 {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+%r400 {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+%r700 {
+  font-family: "Roboto";
+  font-weight: 700;
+}

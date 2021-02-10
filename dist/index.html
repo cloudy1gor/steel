@@ -8,47 +8,62 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">       header.header
-        <div class="header__left-block">
-          <div class="header__logo"><img src="icons/logo.svg" alt="Логотип"/></div>
-          <nav class="header__links"><a class="header__link" href="#">Доставка питания</a><a class="header__link" href="#">Второй пункт</a></nav>
-        </div>
-        <div class="header__right-block">
-          <button class="btn btn_white" data-modal="data-modal">Связаться с нами</button>
+      <header class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__logo">
+              <svg class="header__icon">
+                <use xlink:href="images/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <nav class="header__links"><a class="header__link" href="#">Доставка еды</a><a class="header__link header__link--special" href="#">Особые пожелания</a></nav>
+            <div class="header__btn">
+              <button class="btn btn_white" data-modal="data-modal">Связаться с нами</button>
+            </div>
+          </div>
         </div>
       </header>
       <main class="main">
-        <div class="sidepanel">
-          <div class="sidepanel__text"><span>Социальные сети</span></div>
-          <div class="sidepanel__divider"></div><a class="sidepanel__icon" href="#"><img src="icons/instagram.svg" alt="instagram"/></a><a class="sidepanel__icon" href="#"><img src="icons/facebook.svg" alt="facebook"/></a>
+        <div class="sidepanel"><a class="sidepanel__link" href="#">
+            <svg class="sidepanel__icon">
+              <use xlink:href="images/sprite.svg#facebook"></use>
+            </svg></a><a class="sidepanel__link" href="#">
+            <svg class="sidepanel__icon">
+              <use xlink:href="images/sprite.svg#instagram"></use>
+            </svg></a>
+          <button class="slidepanel__up"> 
+            <svg class="sidepanel__icon">
+              <use xlink:href="images/sprite.svg#up"></use>
+            </svg>
+          </button>
         </div>
         <div class="preview"></div>
-        <div class="bgc_blue"></div>
+        <div class="preview__bg"></div>
         <div class="container">
-          <div class="tabcontainer">
-            <div class="tabcontent"><img src="images/tabs/vegy.jpg" alt="vegy"/>
-              <div class="tabcontent__descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</div>
+          <div class="preview__inner">
+            <div class="preview__content"><img class="preview__img" src="images/tabs/vegy.jpg" alt="vegy"/>
+              <div class="preview__descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</div>
             </div>
-            <div class="tabcontent"><img src="images/tabs/elite.jpg" alt="elite"/>
-              <div class="tabcontent__descr">Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!</div>
+            <div class="preview__content"><img class="preview__img" src="images/tabs/elite.jpg" alt="elite"/>
+              <div class="preview__descr">Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!</div>
             </div>
-            <div class="tabcontent"><img src="images/tabs/post.jpg" alt="post"/>
-              <div class="tabcontent__descr">Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!</div>
+            <div class="preview__content"><img class="preview__img" src="images/tabs/post.jpg" alt="post"/>
+              <div class="preview__descr">Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!</div>
             </div>
-            <div class="tabcontent"><img src="images/tabs/vegy.jpg" alt="vegy"/>
-              <div class="tabcontent__descr">Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.</div>
+            <div class="preview__content"><img class="preview__img" src="images/tabs/vegy.jpg" alt="vegy"/>
+              <div class="preview__descr">Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.</div>
             </div>
-            <div class="tabheader">
-              <h3>Выберите стиль питания</h3>
-              <div class="tabheader__items">
-                <div class="tabheader__item tabheader__item_active">Фитнес</div>
-                <div class="tabheader__item">Премиум</div>
-                <div class="tabheader__item">Постное</div>
-                <div class="tabheader__item">Сбалансированное</div>
+            <div class="preview__tabs">
+              <h3 class="preview__style">Выберите стиль питания</h3>
+              <div class="preview__nav">
+                <div class="preview__tab preview__tab--active">Классик</div>
+                <div class="preview__tab">Премиум</div>
+                <div class="preview__tab">Поострее</div>
+                <div class="preview__tab">Пока диета</div>
               </div>
             </div>
           </div>
-          <div class="preview__life">Живи полной жизнью!</div>
+          <div class="preview__slogan">Живи полной жизнью!</div>
         </div>
         <div class="divider"></div>
         <div class="offer">

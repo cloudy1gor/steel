@@ -1,9 +1,11 @@
-header.header        header.header
-  .header__left-block
-    .header__logo
-      img(src='icons/logo.svg', alt='Логотип')
-    nav.header__links
-      a.header__link(href='#') Доставка питания
-      a.header__link(href='#') Второй пункт
-  .header__right-block
-    button.btn.btn_white(data-modal) Связаться с нами
+header.header
+  .container
+    .header__content
+      .header__logo
+        svg.header__icon
+          use(xlink:href="images/sprite.svg#logo")
+      nav.header__links
+        a.header__link(href='#') Доставка еды
+        a.header__link.header__link--special(href='#') Особые пожелания
+      .header__btn
+        button.btn.btn_white(data-modal) Связаться с нами

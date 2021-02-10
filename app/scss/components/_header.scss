@@ -1,43 +1,50 @@
 .header {
+  color: #fff;
+  background-color: $dark;
+
+  &__content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 150px;
-    padding: 0 100px;
-    &__left-block {
-        display: flex;
-        justify-content: space-between;
-        min-width: 550px;
+    justify-content: space-between;
+    min-width: 550px;
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    max-width: 90px;
+    max-height: 70px;
+    fill: #fff;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__link {
+    position: relative;
+    z-index: 2;
+    margin-right: 45px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+
+    &::after {
+      @include bg();
+      @include pseudo();
+      left: -10px;
+      bottom: 0;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
     }
-    &__logo {
-        max-width: 170px;
-        img {
-            width: 100%;
-        }
+
+    &:last-child {
+      margin-right: 0;
     }
-    &__links {
-        display: flex;
-        align-items: center;
-    }
-    &__link {
-        position: relative;
-        margin-right: 45px;
-        font-weight: bold;
-        font-size: 18px;
-        color: $dark;
-        &:after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 110%;
-            left: -5%;
-            bottom: -1px;
-            z-index: -1;
-            height: 8px;
-            background: $primary;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+  }
 }

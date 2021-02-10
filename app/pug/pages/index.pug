@@ -10,42 +10,44 @@ html(lang="en")
       include ../components/_header.pug
       main.main
         .sidepanel
-          .sidepanel__text
-            span Социальные сети
-          .sidepanel__divider
-          a.sidepanel__icon(href='#')
-            img(src='icons/instagram.svg', alt='instagram')
-          a.sidepanel__icon(href='#')
-            img(src='icons/facebook.svg', alt='facebook')
+          a.sidepanel__link(href='#')
+            svg.sidepanel__icon
+              use(xlink:href="images/sprite.svg#facebook")
+          a.sidepanel__link(href='#')
+            svg.sidepanel__icon
+              use(xlink:href="images/sprite.svg#instagram")
+          button.slidepanel__up 
+            svg.sidepanel__icon
+              use(xlink:href="images/sprite.svg#up")
 
         .preview
-        .bgc_blue
+        .preview__bg
         .container
-          .tabcontainer
-            .tabcontent
-              img(src='images/tabs/vegy.jpg', alt='vegy')
-              .tabcontent__descr Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
+          .preview__inner
+            .preview__content
+              img.preview__img(src='images/tabs/vegy.jpg', alt='vegy')
+              .preview__descr Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
                 
-            .tabcontent
-              img(src='images/tabs/elite.jpg', alt='elite')
-              .tabcontent__descr Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!
+            .preview__content
+              img.preview__img(src='images/tabs/elite.jpg', alt='elite')
+              .preview__descr Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!
                 
-            .tabcontent
-              img(src='images/tabs/post.jpg', alt='post')
-              .tabcontent__descr Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!
+            .preview__content
+              img.preview__img(src='images/tabs/post.jpg', alt='post')
+              .preview__descr Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!
                 
-            .tabcontent
-              img(src='images/tabs/vegy.jpg', alt='vegy')
-              .tabcontent__descr Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
+            .preview__content
+              img.preview__img(src='images/tabs/vegy.jpg', alt='vegy')
+              .preview__descr Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
                 
-            .tabheader
-              h3 Выберите стиль питания
-              .tabheader__items
-                .tabheader__item.tabheader__item_active Фитнес
-                .tabheader__item Премиум
-                .tabheader__item Постное
-                .tabheader__item Сбалансированное
-          .preview__life Живи полной жизнью!
+            .preview__tabs
+              h3.preview__style Выберите стиль питания
+              .preview__nav
+                .preview__tab.preview__tab--active Классик
+                .preview__tab Премиум
+                .preview__tab Поострее
+                .preview__tab Пока диета
+          .preview__slogan Живи полной жизнью!
 
         .divider
         .offer
