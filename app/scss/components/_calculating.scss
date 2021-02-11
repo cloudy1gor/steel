@@ -1,90 +1,102 @@
 .calculating {
-    padding: 50px 0;
-    .title {
-        text-align: center;
+  padding: 50px 0;
+
+  .title {
+    text-align: center;
+  }
+
+  &__field {
+    margin-top: 50px;
+    padding: 30px 0 40px;
+    width: 100%;
+    background: rgba(146, 242, 255, 0.15);
+  }
+
+  &__subtitle {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+
+    &:first-child {
+      margin-top: 0;
     }
-    &__field {
-        width: 100%;
-        margin-top: 50px;
-        background: rgba(146, 242, 255, 0.15);
-        padding: 30px 0 40px 0;
+  }
+
+  #gender::after {
+    @include pseudo();
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__choose {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: none;
+      padding: 0 10px;
+      width: 170px;
+      height: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      text-align: center;
+      background: #fff;
+      transition: 0.3s all;
+      cursor: pointer;
+
+      &_active {
+        color: #fff;
+        background-color: $bg;
+      }
     }
-    &__subtitle {
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 30px;
-        &:first-child {
-            margin-top: 0;
-        }
+
+    &_medium {
+      justify-content: space-between;
+      margin: 30px auto 0;
+      width: 743px;
     }
-    #gender:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        display: block;
-        width: 16px;
-        height: 16px;
-        background: url('../icons/switch.svg') center (center / cover) no-repeat;
+
+    &_big {
+      justify-content: space-between;
+      margin: 30px auto 0;
+      width: 930px;
+
+      .calculating__choose-item {
+        width: 200px;
+      }
     }
-    &__choose {
-        position: relative;
-        display: flex;
-        margin-top: 30px;
-        justify-content: center;
-        &-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 170px;
-            height: 50px;
-            padding: 0 10px;
-            background: #FFFFFF;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border: none;
-            text-align: center;
-            font-size: 14px;
-            cursor: pointer;
-            outline: none;
-            transition: 0.3s all;
-            &_active {
-                color: #fff;
-                background-color: $primary;
-            }
-        }
-        &_medium {
-            width: 743px;
-            justify-content: space-between;
-            margin: 30px auto 0 auto;
-        }
-        &_big {
-            width: 930px;
-            justify-content: space-between;
-            margin: 30px auto 0 auto;
-            .calculating__choose-item {
-                width: 200px;
-            }
-        }
+  }
+
+  &__divider {
+    margin: 40px auto;
+    width: 490px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 490px;
+  }
+
+  &__result {
+    font-weight: 700;
+    font-size: 18px;
+
+    span {
+      font-size: 42px;
     }
-    &__divider {
-        width: 490px;
-        height: 1px;
-        margin: 40px auto;
-        background-color: rgba(0,0,0, .2);
-    }
-    &__total {
-        width: 490px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__result {
-        font-size: 18px;
-        font-weight: bold;
-        span {
-            font-size: 42px;
-        }
-    }
+  }
 }

@@ -1,11 +1,23 @@
 header.header
   .container
+    .header__top
+      address.header__address ул. Ярослава Мудрого, 37, ТЦ "КУБ"
+      .header__contacts Служба доставки:
+      .header__inner
+        ul.header__list
+          li.header__item 
+            a.header__tel(href="tel:+38098-111-11-11") +38098-111-11-11
+          li.header__item 
+            a.header__tel(href="tel:+38099-222-22-22") +38099-222-22-22
+          li.header__item 
+            a.header__tel(href="tel:+38093-333-33-33") +38093-333-33-33
+
     .header__content
       .header__logo
         svg.header__icon
           use(xlink:href="images/sprite.svg#logo")
       nav.header__links
-        a.header__link(href='#') Доставка еды
+        a.header__link(href='#') Меню
         a.header__link.header__link--special(href='#') Особые пожелания
       .header__btn
-        button.btn.btn_white(data-modal) Связаться с нами
+        button.btn.btn--white(data-modal) Связаться с нами

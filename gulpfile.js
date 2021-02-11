@@ -2,13 +2,12 @@
 const { src, dest, parallel, series, watch } = require("gulp");
 
 const pug = require("gulp-pug");
+const webpack = require("webpack-stream");
 const browserSync = require("browser-sync").create();
-const concat = require("gulp-concat");
-const babel = require("gulp-babel");
+const rename = require("gulp-rename");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const sourcemaps = require("gulp-sourcemaps");
-const uglify = require("gulp-uglify-es").default;
 const sass = require("gulp-sass");
 const fibers = require("fibers"); // для лучшей компиляции scss
 const autoprefixer = require("gulp-autoprefixer");
@@ -73,9 +72,37 @@ function scripts() {
     .pipe(
       plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
     )
-    .pipe(babel({ presets: ["@babel/env"] }))
-    .pipe(uglify()) // Сжатие JavaScript кода
-    .pipe(concat("main.min.js"))
+    .pipe(
+      webpack({
+        mode: "production",
+        output: {
+          filename: "main.js",
+        },
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [
+                    [
+                      "@babel/preset-env",
+                      {
+                        corejs: 3,
+                        useBuiltIns: "usage",
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(rename("main.min.js"))
     .pipe(dest("dist/js/"))
     .pipe(
       size({
@@ -100,7 +127,7 @@ function styles() {
         overrideBrowserslist: ["last 8 versions"],
         cascade: true,
         browsers: [
-          "Android >= 4",
+          "Android >= 6",
           "Chrome >= 20",
           "Firefox >= 24",
           "Explorer >= 11",
@@ -121,7 +148,7 @@ function styles() {
         },
       })
     )
-    .pipe(concat("style.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist/css/"))
     .pipe(
@@ -331,7 +358,7 @@ function startwatch() {
 
   watch("app/scss/**/*.scss", styles);
 
-  watch(["app/js/*.js", "!app/js/*.min.js"], scripts);
+  watch(["app/js/**/*.js", "!app/js/*.min.js"], scripts);
 
   watch("app/images/**/*.+(jpg|jpeg|png|gif|svg|ico)", img);
 

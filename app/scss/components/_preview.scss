@@ -1,6 +1,6 @@
 .preview {
   position: relative;
-  padding: 28px 0 100px;
+  padding: 28px 0 120px;
 
   &__inner {
     display: flex;
@@ -19,12 +19,6 @@
     background: rgba(0, 0, 0, 0.15);
   }
 
-  &__slogan {
-    margin: 35 0 0 35;
-    font-weight: 700;
-    font-size: 20px;
-  }
-
   &__content {
     position: relative;
     max-width: 850px;
@@ -38,7 +32,7 @@
 
   &__descr {
     position: absolute;
-    right: -177px;
+    left: -110px;
     top: 300px;
     padding: 50px;
     width: 550px;
@@ -74,10 +68,10 @@
     transition: 0.3s all;
     cursor: pointer;
 
-    &_active {
-      font-weight: 700;
+    &--active {
       font-size: 22px;
       color: #000;
+      @extend %r700;
     }
   }
 }

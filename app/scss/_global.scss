@@ -25,6 +25,7 @@ body {
 
 .main {
   flex-grow: 1;
+  background-color: $bg;
 }
 
 .btn {
@@ -39,26 +40,26 @@ body {
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  transition: 0.3s all;
+  transition: background-color 0.4s;
   cursor: pointer;
 
-  &_white {
+  &:hover {
+    background-color: $accent;
+  }
+
+  &--white {
     color: $dark;
     background-color: #fff;
   }
 
-  &_dark {
+  &--dark {
     border: none;
     color: #fff;
     background-color: $dark;
   }
 
-  &_min {
+  &--min {
     height: 50px;
-  }
-
-  &:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -81,7 +82,7 @@ body {
 }
 
 .show {
-  display: block;
+  display: block !important;
 }
 
 .hide {
@@ -89,14 +90,5 @@ body {
 }
 
 .fade {
-  animation: fade 1.5s;
-}
-@keyframes fade {
-  0% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  animation: "fade" 1s;
 }

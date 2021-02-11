@@ -1,12 +1,13 @@
 footer.footer
-  .container
-    .social
-      .subtitle Мы в социальных сетях:
-      a.link(href='#') instagram
-      a.link(href='#') facebook
-    .pepper
-      img(src='icons/veg.svg', alt='pepper')
-    .call
-      .subtitle Или позвоните нам
-      a.link(href='#') +380678341034
-      a.link(href='#') +380500941356
+  .container.footer__container
+    .footer__social
+      .footer__subtitle Мы в социальных сетях:
+      a.footer__link(href='#') instagram
+      a.footer__link(href='#') facebook
+    .footer__logo
+      svg.footer__img
+        use(xlink:href="images/sprite.svg#footer")
+    .footer__numbers
+      .footer__subtitle Или позвоните нам
+      a.footer__link(href="tel:+380678341034") +380678341034
+      a.footer__link(href="tel:+380500941356") +380500941356
