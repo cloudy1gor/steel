@@ -1,19 +1,11 @@
 .offer {
   position: relative;
-  padding: 70px 0 100px;
+  padding: 70px 0 30px;
 
   &__container {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__bg {
-    position: absolute;
-    top: 50px;
-    z-index: -1;
-    width: 1109px;
-    height: 780px;
-    background: rgba(243, 255, 222, 0.45);
+    margin-bottom: 50px;
   }
 
   &__text {
@@ -34,11 +26,10 @@
   }
 
   &__advantages {
-    margin-top: 50px;
-    width: 330px;
+    max-width: 330px;
 
     &-text {
-      margin-top: 20px;
+      margin-bottom: 20px;
       font-weight: 300;
       font-size: 18px;
       line-height: 21px;
@@ -46,44 +37,49 @@
   }
 
   &__subtitle {
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px;
-
-    &:first-child {
-      margin-top: 70px;
-    }
   }
 
   &__slider {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 50px;
-    width: 650px;
+    max-width: 650px;
 
     &-counter {
       display: flex;
       align-items: center;
-      width: 180px;
+      justify-content: center;
+      min-width: 100%;
       font-size: 24px;
       color: rgba(0, 0, 0, 0.5);
     }
 
     &-wrapper {
-      margin-top: 15px;
-      width: 100%;
+      margin-bottom: 50px;
+      min-width: 100%;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     }
 
     &-prev {
-      margin-right: 10px;
+      margin-right: 20px;
       cursor: pointer;
     }
 
     &-next {
-      margin-left: 10px;
+      margin-left: 20px;
       cursor: pointer;
+    }
+
+    &-icon {
+      max-width: 45px;
+      max-height: 45px;
+
+      &--rotate {
+        transform: rotate(180deg);
+      }
     }
 
     #current {

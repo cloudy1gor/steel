@@ -69,13 +69,6 @@ body {
   max-width: 1230px;
 }
 
-.divider {
-  margin: 0 auto;
-  width: 330px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .title {
   font-size: 36px;
   @extend %r400;

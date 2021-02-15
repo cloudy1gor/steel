@@ -10,7 +10,7 @@ function calculate(params) {
 
   function calcTotal() {
     if (!sex || !height || !weight || !age || !ratio) {
-      result.textContent = "____"; // Можете придумать что угодно
+      result.textContent = "***"; // Можете придумать что угодно
       return;
     }
     if (sex === "female") {
@@ -48,10 +48,10 @@ function calculate(params) {
     });
   }
 
-  getStaticInformation("#gender", "calculating__choose-item_active");
+  getStaticInformation("#gender", "calculating__choose-item--active");
   getStaticInformation(
-    ".calculating__choose_big",
-    "calculating__choose-item_active"
+    ".calculating__choose--big",
+    "calculating__choose-item--active"
   );
 
   function getDynamicInformation(selector) {

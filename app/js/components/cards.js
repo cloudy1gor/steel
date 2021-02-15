@@ -11,12 +11,6 @@ function cards(params) {
       // берем DOM элемент
       this.parrent = document.querySelector(parrentSelector);
       this.prise = price;
-      this.transfer = 28;
-      this.changeToUAH();
-    }
-    // метод для конвертации валют
-    changeToUAH() {
-      this.price = this.transfer;
     }
 
     // для формирования верстки
@@ -38,7 +32,7 @@ function cards(params) {
         <div class="menu__item-divider"></div>
         <div class="menu__item-price">
           <div class="menu__item-cost">Цена:</div>
-          <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+          <div class="menu__item-total"><span>${this.prise}</span> грн</div>
         </div>
         `;
       this.parrent.append(element);
@@ -47,16 +41,38 @@ function cards(params) {
 
   // создаем новый обьект и вызываем метод render()
   const div = new MenuCard(
-    "images / tabs / vegy.jpg",
-    "vergy",
-    "Меню Фитнес",
-    "это новый подход к приготовлению блюд",
-    8,
+    "images/menu/1.jpg",
+    "Десерт",
+    "Фрутовый тост",
+    "Только натуральный сахар и мед, недно и сладко",
+    "70",
+    ".menu .container",
+    "menu__item",
+    "test-class"
+  );
+  const div3 = new MenuCard(
+    "images/menu/3.jpg",
+    "Десерт",
+    "Лосось в апельсиновом соусе",
+    "Апельсин раскрывает истинный вкус лосося",
+    220,
+    ".menu .container",
+    "menu__item",
+    "test-class"
+  );
+  const div2 = new MenuCard(
+    "images/menu/2.jpg",
+    "Десерт",
+    "Салат свежесть",
+    "Пряные травы в сочитании с свежим сыром саздают невообразмый вкус",
+    140,
     ".menu .container",
     "menu__item",
     "test-class"
   );
   div.render();
+  div2.render();
+  div3.render();
 }
 
 export default cards;

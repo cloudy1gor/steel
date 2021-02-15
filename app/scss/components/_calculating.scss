@@ -2,18 +2,23 @@
   padding: 50px 0;
 
   .title {
+    margin-bottom: 50px;
     text-align: center;
   }
 
-  &__field {
-    margin-top: 50px;
+  &__content {
+    @include bg($size: 48%, $position: left);
+  }
+
+  &__body {
+    margin-left: auto;
     padding: 30px 0 40px;
-    width: 100%;
-    background: rgba(146, 242, 255, 0.15);
+    max-width: 50%;
+    background: rgba(146, 242, 255, 0.1);
   }
 
   &__subtitle {
-    margin-top: 30px;
+    margin: 15px 0 20px;
     font-weight: 700;
     font-size: 18px;
     text-align: center;
@@ -33,19 +38,18 @@
 
   &__choose {
     position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    max-width: 50%;
 
     &-item {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 15px;
       outline: none;
       border: none;
       padding: 0 10px;
-      width: 170px;
-      height: 50px;
+      min-width: 170px;
+      min-height: 50px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       font-size: 14px;
       text-align: center;
@@ -53,27 +57,24 @@
       transition: 0.3s all;
       cursor: pointer;
 
-      &_active {
+      &--active {
         color: #fff;
         background-color: $bg;
       }
     }
 
-    &_medium {
-      justify-content: space-between;
-      margin: 30px auto 0;
-      width: 743px;
+    &--top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
     }
+  }
 
-    &_big {
-      justify-content: space-between;
-      margin: 30px auto 0;
-      width: 930px;
-
-      .calculating__choose-item {
-        width: 200px;
-      }
-    }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__divider {

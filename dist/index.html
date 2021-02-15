@@ -76,9 +76,7 @@
             </div>
           </div>
         </section>
-        <div class="divider"></div>
         <section class="offer">
-          <div class="offer__bg"></div>
           <div class="container offer__container">
             <div class="offer__text">
               <h2 class="title">Как нсчет свежего завтрака?</h2>
@@ -105,79 +103,68 @@
               </div>
             </div>
             <div class="offer__slider">
+              <div class="offer__slider-wrapper">
+                <div class="offer__slider-inner">
+                  <div class="offer__slide"><img class="offer__img" src="images/slider/1.jpg" alt="pepper"/></div>
+                  <div class="offer__slide"><img class="offer__img" src="images/slider/2.jpg" alt="food"/></div>
+                  <div class="offer__slide"><img class="offer__img" src="images/slider/3.jpg" alt="oil"/></div>
+                  <div class="offer__slide"><img class="offer__img" src="images/slider/4.jpg" alt="paprika"/></div>
+                </div>
+              </div>
               <div class="offer__slider-counter">
                 <div class="offer__slider-prev">
-                  <svg class="offer__slider-icon">
+                  <svg class="offer__slider-icon offer__slider-icon--rotate">
                     <use xlink:href="images/sprite.svg#right"></use>
                   </svg>
                 </div><span id="current">03</span><span class="offer__rivals">/</span><span id="total">04</span>
                 <div class="offer__slider-next">
-                  <svg class="offer__slider-icon offer__slider-icon--rotate">
+                  <svg class="offer__slider-icon">
                     <use xlink:href="images/sprite.svg#right"></use>
                   </svg>
                 </div>
               </div>
             </div>
-            <div class="offer__slider-wrapper">
-              <div class="offer__slider-inner">
-                <div class="offer__slide"><img class="offer__img" src="images/slider/1.jpg" alt="pepper"/></div>
-                <div class="offer__slide"><img class="offer__img" src="images/slider/2.jpg" alt="food"/></div>
-                <div class="offer__slide"><img class="offer__img" src="images/slider/3.jpg" alt="oil"/></div>
-                <div class="offer__slide"><img class="offer__img" src="images/slider/4.jpg" alt="paprika"/></div>
-              </div>
-            </div>
           </div>
         </section>
-        <div class="divider"></div>
         <section class="calculating">
           <div class="container">
-            <h2 class="title">
-              Рассчитаем вашу потребность в калориях?
-              
-            </h2>
-            <div class="calculating__field">
-              <div class="calculating__subtitle">
-                Ваш пол
-                
-              </div>
-              <div class="calculating__choose" id="gender">
-                <div class="calculating__choose-item calculating__choose-item--active" id="female">Женщина</div>
-                <div class="calculating__choose-item" id="male">Мужчина</div>
-              </div>
-              <div class="calculating__subtitle">
-                Ваша конституция
-                
-              </div>
-              <div class="calculating__choose calculating__choose--medium">
-                <input class="calculating__choose-item" id="height" type="text" placeholder="Введите рост"/>
-                <input class="calculating__choose-item" id="weight" type="text" placeholder="Введите вес"/>
-                <input class="calculating__choose-item" id="age" type="text" placeholder="Введите возраст"/>
-              </div>
-              <div class="calculating__subtitle">
-                Выберите вашу физическая активность
-                
-              </div>
-              <div class="calculating__choose calculating__choose--big">
-                <div class="calculating__choose-item" id="low" data-ratio="1.2">Низкая активность</div>
-                <div class="calculating__choose-item calculating__choose-item--active" id="small" data-ratio="1.375">Невысокая активность</div>
-                <div class="calculating__choose-item" id="medium" data-ratio="1.55">Умеренная активность</div>
-                <div class="calculating__choose-item" id="high" data-ratio="1.725">Высокая активность</div>
-              </div>
-              <div class="calculating__divider"></div>
-              <div class="calculating__total">
+            <h2 class="title">Рассчитаем вашу потребность в калориях?</h2>
+            <div class="calculating__content" style="background-image: url('images/salad.jpg')">
+              <div class="calculating__body">
                 <div class="calculating__subtitle">
-                  Ваша суточная норма калорий:
+                  Укадите ваш пол
                   
                 </div>
-                <div class="calculating__result"><span>2700 ккал</span></div>
+                <div class="calculating__choose calculating__choose--top" id="gender">
+                  <div class="calculating__choose-item calculating__choose-item--active" id="female">Женщина</div>
+                  <div class="calculating__choose-item" id="male">Мужчина</div>
+                </div>
+                <div class="calculating__subtitle">Заполните данные</div>
+                <div class="calculating__box">
+                  <div class="calculating__choose calculating__choose--medium">
+                    <input class="calculating__choose-item" id="height" type="text" placeholder="Введите рост"/>
+                    <input class="calculating__choose-item" id="weight" type="text" placeholder="Введите вес"/>
+                    <input class="calculating__choose-item" id="age" type="text" placeholder="Введите возраст"/>
+                  </div>
+                  <div class="calculating__choose calculating__choose--big">
+                    <div class="calculating__choose-item" id="low" data-ratio="1.2">Низкая активность</div>
+                    <div class="calculating__choose-item calculating__choose-item--active" id="small" data-ratio="1.375">Невысокая активность</div>
+                    <div class="calculating__choose-item" id="medium" data-ratio="1.55">Умеренная активность</div>
+                    <div class="calculating__choose-item" id="high" data-ratio="1.725">Высокая активность</div>
+                  </div>
+                </div>
+                <div class="calculating__divider"></div>
+                <div class="calculating__total">
+                  <div class="calculating__info">Ваша суточная норма калорий:</div>
+                  <div class="calculating__result"><span>2700 ккал</span></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <div class="divider"></div>
         <div class="menu">
-          <h2 class="title menu__title">Наше меню на день</h2>
-          <div class="menu__field">
+          <h2 class="title menu__title">Лучшие блюда</h2>
+          <div class="menu__body">
             <div class="container"></div>
           </div>
         </div>
@@ -186,26 +173,25 @@
             <div class="title">Заказывай пробный день прямо сейчас!</div>
             <form class="order__form" action="#">
               <input class="order__input" required="required" placeholder="Ваше имя" name="name" type="text"/>
-              <input class="order__input" required="required" placeholder="Ваш номер телефона" name="phone" type="phone"/><img src="icons/right.svg" alt="right"/>
+              <input class="order__input" required="required" placeholder="Ваш номер телефона" name="phone" type="phone"/>
               <button class="btn btn--dark btn--min">Перезвонить мне</button>
             </form>
           </div>
-          <div class="divider"></div>
-          <div class="promotion">
-            <div class="bgc_y"></div>
-            <div class="container">
-              <div class="promotion__text">
-                <div class="title">Акция для новых клиентов!</div>
-                <div class="promotion__descr">Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере <span>20%!</span><span>Акция закончится 20 мая в 00:00</span></div>
-              </div>
-              <div class="promotion__timer">
-                <div class="title">Осталось до конца акции:</div>
-                <div class="timer">
-                  <div class="timer__block"><span id="days">12 дней</span></div>
-                  <div class="timer__block"><span id="hours">20 часов</span></div>
-                  <div class="timer__block"><span id="minutes">56 минут</span></div>
-                  <div class="timer__block"><span id="seconds">20 секунд</span></div>
-                </div>
+        </div>
+        <div class="promotion">
+          <div class="bgc_y"></div>
+          <div class="container">
+            <div class="promotion__text">
+              <div class="title">Акция для новых клиентов!</div>
+              <div class="promotion__descr">Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере <span>20%!</span><span>Акция закончится 20 мая в 00:00</span></div>
+            </div>
+            <div class="promotion__timer">
+              <div class="title">Осталось до конца акции:</div>
+              <div class="timer">
+                <div class="timer__block"><span id="days">12 дней</span></div>
+                <div class="timer__block"><span id="hours">20 часов</span></div>
+                <div class="timer__block"><span id="minutes">56 минут</span></div>
+                <div class="timer__block"><span id="seconds">20 секунд</span></div>
               </div>
             </div>
           </div>

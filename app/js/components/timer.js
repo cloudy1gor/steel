@@ -1,7 +1,7 @@
 function timer(params) {
   //TODO таймер обратного отсчета
 
-  const deadline = "2021-02-09"; // отправная точка
+  const deadline = "2021-05-09"; // отправная точка
 
   function getTimeRemaing(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date()); // количество милисекунд до которого нужно досчитать, получим разницу в милисекундах
