@@ -50,6 +50,9 @@ body {
   &--white {
     color: $dark;
     background-color: #fff;
+    @include mq("768") {
+      display: none;
+    }
   }
 
   &--dark {
@@ -60,6 +63,31 @@ body {
 
   &--min {
     height: 50px;
+    @include mq("1360") {
+      min-width: 180px;
+    }
+  }
+
+  &--menu {
+    display: none;
+    min-width: 50px;
+    min-height: 50px;
+    @include mq("768") {
+      position: relative;
+      display: block;
+
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        padding: 2px;
+        max-width: 46px;
+        max-height: 44px;
+        fill: #000;
+        background-color: #fff;
+      }
+    }
   }
 }
 

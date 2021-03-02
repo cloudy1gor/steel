@@ -6,10 +6,18 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    @include mq("768") {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__text {
-    width: 580px;
+    max-width: 580px;
+    @include mq("768") {
+      max-width: 85%;
+    }
   }
 
   &__descr {
@@ -17,6 +25,9 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 24px;
+    @include mq("768") {
+      margin-bottom: 40px;
+    }
   }
 
   &__action {
@@ -34,12 +45,20 @@
       font-size: 18px;
       line-height: 21px;
     }
+    @include mq("768") {
+      margin-bottom: 40px;
+      max-width: 90%;
+    }
   }
 
   &__subtitle {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px;
+    @include mq("768") {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__slider {

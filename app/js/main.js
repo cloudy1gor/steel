@@ -8,6 +8,7 @@ import calculate from "./components/calculat";
 import data from "./components/data";
 import slider from "./components/slider";
 import clicks from "./components/click";
+import menu from "./components/menu";
 
 window.addEventListener("DOMContentLoaded", () => {
   AOS.init();
@@ -20,4 +21,5 @@ window.addEventListener("DOMContentLoaded", () => {
   data();
   slider();
   clicks();
+  menu();
 });

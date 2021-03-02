@@ -1,9 +1,15 @@
 .promotion {
   position: relative;
   padding: 70px 0 240px;
+  @include mq("768") {
+    padding: 40px 0 100px;
+  }
 
   .container {
     display: flex;
+    @include mq("1360") {
+      flex-direction: column;
+    }
   }
 
   .bgc_y {
@@ -17,7 +23,15 @@
   }
 
   &__text {
-    width: 50%;
+    max-width: 50%;
+    @include mq("1360") {
+      margin: 0 auto;
+      max-width: 90%;
+      text-align: center;
+    }
+    @include mq("768") {
+      margin-bottom: 40px;
+    }
   }
 
   &__descr {
@@ -33,10 +47,13 @@
   }
 
   &__timer {
-    width: 50%;
+    max-width: 50%;
 
     .title {
       text-align: right;
+      @include mq("768") {
+        text-align: center;
+      }
     }
 
     .timer {
@@ -47,8 +64,8 @@
       padding-left: 95px;
 
       &__block {
-        width: 102px;
-        height: 120px;
+        min-width: 102px;
+        min-height: 120px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         font-weight: 300;
         font-size: 16px;
@@ -62,7 +79,36 @@
           font-weight: 700;
           font-size: 56px;
         }
+        @include mq("1360") {
+          margin: 10px;
+        }
+        @include mq("500") {
+          min-width: 65px;
+          min-height: 60px;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 42px;
+          }
+        }
       }
+      @include mq("768") {
+        padding-left: 0;
+      }
+    }
+    @include mq("1360") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 90%;
+      text-align: center;
+    }
+    @include mq("768") {
+      flex-direction: column;
     }
   }
 }

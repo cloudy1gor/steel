@@ -5,11 +5,11 @@ header.header
       .header__contacts Служба доставки:
       .header__inner
         ul.header__list
-          li.header__item 
+          li.header__item
             a.header__tel(href="tel:+38098-111-11-11") +38098-111-11-11
-          li.header__item 
+          li.header__item
             a.header__tel(href="tel:+38099-222-22-22") +38099-222-22-22
-          li.header__item 
+          li.header__item
             a.header__tel(href="tel:+38093-333-33-33") +38093-333-33-33
 
     .header__content
@@ -21,3 +21,6 @@ header.header
         a.header__link.header__link--special(href='#') Особые пожелания
       .header__btn
         button.btn.btn--white(data-modal) Связаться с нами
+        button.btn--menu
+          svg.header__icon.header__icon--btn
+            use(xlink:href="images/sprite.svg#menu")

@@ -8,6 +8,9 @@
 
   &__content {
     @include bg($size: 48%, $position: left);
+    @include mq("1360") {
+      background-size: 100%;
+    }
   }
 
   &__body {
@@ -15,6 +18,11 @@
     padding: 30px 0 40px;
     max-width: 50%;
     background: rgba(146, 242, 255, 0.1);
+    @include mq("1360") {
+      margin: 0 auto;
+      max-width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   &__subtitle {
@@ -25,6 +33,9 @@
 
     &:first-child {
       margin-top: 0;
+    }
+    @include mq("1360") {
+      color: #fff;
     }
   }
 
@@ -54,7 +65,7 @@
       font-size: 14px;
       text-align: center;
       background: #fff;
-      transition: 0.3s all;
+      transition: color 0.3s, background-color 0.3s;
       cursor: pointer;
 
       &--active {
@@ -69,12 +80,21 @@
       justify-content: center;
       max-width: 100%;
     }
+    @include mq("500") {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
   }
 
   &__box {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mq("500") {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__divider {
@@ -89,7 +109,13 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    width: 490px;
+    max-width: 490px;
+    @include mq("1360") {
+      color: #fff;
+    }
+    @include mq("500") {
+      flex-direction: column;
+    }
   }
 
   &__result {
@@ -99,5 +125,8 @@
     span {
       font-size: 42px;
     }
+  }
+  @include mq("768") {
+    padding: 0;
   }
 }

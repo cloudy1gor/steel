@@ -15,17 +15,27 @@
     img {
       transform: scale(1.5);
     }
+    @include mq("1360") {
+      padding: 0;
+    }
+    @include mq("768") {
+      flex-direction: column;
+    }
   }
 
   &__input {
     outline: none;
     border: none;
     padding: 0 20px;
-    width: 280px;
-    height: 50px;
+    min-height: 50px;
+    max-width: 280px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     font-size: 18px;
     text-align: center;
     background: #fff;
+    @include mq("768") {
+      margin-bottom: 40px;
+      min-width: 60%;
+    }
   }
 }

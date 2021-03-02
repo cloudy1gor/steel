@@ -26,7 +26,7 @@ function cards(params) {
         });
       }
       element.innerHTML = `
-        <img src="${this.src}" alt="${this.alt}">
+        <img src="${this.src}" alt="${this.alt} loading="lazy"">
         <h3 class="menu__item-subtitle">${this.title}</h3>
         <div class="menu__item-descr">${this.description}</div>
         <div class="menu__item-divider"></div>

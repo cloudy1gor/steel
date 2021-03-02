@@ -16,7 +16,7 @@ html(lang="en")
           a.sidepanel__link(href='#')
             svg.sidepanel__icon
               use(xlink:href="images/sprite.svg#instagram")
-          button.slidepanel__up 
+          button.slidepanel__up
             svg.sidepanel__icon
               use(xlink:href="images/sprite.svg#up")
 
@@ -27,19 +27,19 @@ html(lang="en")
               .preview__content
                 img.preview__img(src='images/tabs/pasta.jpg', alt='vegy')
                 .preview__descr Меню "Классик" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
-                  
+
               .preview__content
                 img.preview__img(src='images/tabs/sushi.jpg', alt='elite')
                 .preview__descr Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!
-                  
+
               .preview__content
                 img.preview__img(src='images/tabs/pizza.jpg', alt='post')
                 .preview__descr Наше специальное “Поострее” - это тщательный подбор ингредиентов. Полная гармония с собой и природой в каждом элементе! Все будет Ом!
-                  
+
               .preview__content
                 img.preview__img(src='images/tabs/burger.jpg', alt='vegy')
                 .preview__descr Меню "Пока диета" - это сладко жирно и много! Хватит отказывать себе в удовольствии.
-                  
+
               .preview__tabs
                 h3.preview__style Выберите стиль питания
                 .preview__nav
@@ -53,23 +53,23 @@ html(lang="en")
             .offer__text
               h2.title Как нсчет свежего завтрака?
               .offer__descr.
-                
+
                 Торопишься? Позвони нам, и мы приготовим завтрак точно к твоему приходу в ресторан.
-                
+
             .offer__action
               button.btn.btn--dark(data-modal) Связаться с нами
           .container.offer__container
             .offer__advantages
               h3.offer__subtitle Быстро и полезно
               .offer__advantages-text.
-                
+
                 Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты можешь действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве продукта!
-                
+
               h3.offer__subtitle Правильный рацион
               .offer__advantages-text.
-                
+
                 Мы разработали специальное меню, где учтены все нюансы правильного питания, от баланса БЖУ до их приготовления и дробления рациона.
-                
+
             .offer__slider
               .offer__slider-wrapper
                 .offer__slider-inner
@@ -100,9 +100,9 @@ html(lang="en")
             .calculating__content(style="background-image: url('images/salad.jpg')")
               .calculating__body
                 .calculating__subtitle.
-                  
+
                   Укадите ваш пол
-                  
+
                 .calculating__choose.calculating__choose--top#gender
                   #female.calculating__choose-item.calculating__choose-item--active Женщина
                   #male.calculating__choose-item Мужчина
@@ -113,7 +113,7 @@ html(lang="en")
                     input#height.calculating__choose-item(type='text', placeholder='Введите рост')
                     input#weight.calculating__choose-item(type='text', placeholder='Введите вес')
                     input#age.calculating__choose-item(type='text', placeholder='Введите возраст')
-                
+
                   .calculating__choose.calculating__choose--big
                     #low.calculating__choose-item(data-ratio='1.2') Низкая активность
                     #small.calculating__choose-item.calculating__choose-item--active(data-ratio='1.375') Невысокая активность
@@ -122,15 +122,15 @@ html(lang="en")
                 .calculating__divider
                 .calculating__total
                   .calculating__info Ваша суточная норма калорий:
-                    
+
                   .calculating__result
                     span 2700 ккал
 
         .menu
           h2.title.menu__title Лучшие блюда
           .menu__body
-            .container
-        
+            .container.menu__container
+
         .order
           .container
             .title Заказывай пробный день прямо сейчас!
@@ -141,10 +141,10 @@ html(lang="en")
 
         .promotion
           .bgc_y
-          .container
+          .container.promorion__container
             .promotion__text
               .title Акция для новых клиентов!
-              .promotion__descr Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере 
+              .promotion__descr Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере
                 span 20%!
                 span Акция закончится 20 мая в 00:00
 

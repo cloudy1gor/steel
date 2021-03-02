@@ -3,12 +3,20 @@
   min-height: 180px;
   color: #fff;
   background-color: $dark;
+  @include mq("1360") {
+    position: relative;
+    z-index: 11;
+  }
 
   &__container {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     height: 100%;
+    @include mq("500") {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__subtitle {
@@ -25,14 +33,23 @@
     &:hover {
       color: $accent;
     }
+    @include mq("500") {
+      margin-bottom: 40px;
+    }
   }
 
   &__img {
     max-width: 80px;
     max-height: 80px;
+    @include mq("500") {
+      margin-bottom: 40px;
+    }
   }
 
   &__numbers {
     text-align: right;
+    @include mq("500") {
+      margin-left: auto;
+    }
   }
 }
